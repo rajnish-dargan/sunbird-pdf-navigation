@@ -1,0 +1,21 @@
+<div class="container-fluid" style="border: 1px solid black">
+  <div class="row">
+    <div class="col-lg-2 col-sm-2  col-md-2 col-4 d-flex justify-content-center align-items-center">
+      <img src="{{navConfig.downloadImageUrl}}" style="width: 2rem;" (click)="downloadContent()">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-4 col-8 d-flex justify-content-center align-items-center">
+      {{navConfig.message}}
+    </div>
+    <div class="col-lg-2 colg-md-2 col-sm-4 col-8 d-flex justify-content-center align-items-center">
+      <span><input type="number" min="1" max="{{navConfig.totalIndex}}" [(ngModel)]="navConfig.currentIndex"  (ngModelChange)="onChange($event)"> / {{navConfig.totalIndex}}</span>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-4 d-flex justify-content-center align-items-center">
+     <span>
+      <button><img src="{{navConfig.navPreviousImage}}" style="width: 1rem;" (click)="prevPage()"></button>
+     </span>
+     <span class="p-2">
+      <button><img src="{{navConfig.navNextImage}}" style="width: 1rem;" (click)="nextPage()"></button>
+     </span>
+    </div>
+  </div>
+</div>

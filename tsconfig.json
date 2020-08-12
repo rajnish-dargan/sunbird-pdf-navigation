@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "pdf-navigation-player": [
+        "dist/pdf-navigation-player"
+      ],
+      "pdf-navigation-player/*": [
+        "dist/pdf-navigation-player/*"
+      ]
+    }
   }
 }
